@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// Standard Section Block styling
+// -----------------------------------------------------------------------------
+
+@use '../../../assets/styles/scss/01_abstracts/mixins' as *;
+
+.link-block {
+  display: flex;
+  padding-bottom: 2rem;
+  &.justify-left {
+    justify-content: flex-start;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.justify-right {
+    justify-content: flex-end;
+  }
+
+  & a,
+  & h2 {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 58px;
+    color: var(--wp--preset--color--red-1);
+    text-transform: uppercase;
+  }
+
+  // Give links animated underline hover
+  & a h2 {
+    &::before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: var(--wp--preset--color--red-1);
+      position: absolute;
+      bottom: 0;
+      transform: scaleX(0);
+      transition: var(--se--transition);
+      transform-origin: left;
+    }
+
+    &:hover {
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

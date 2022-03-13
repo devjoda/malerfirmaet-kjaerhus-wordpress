@@ -1,0 +1,202 @@
+:root {
+  --red-1: #E5282B;
+  --dark-1: #242B31;
+  --dark-2: #292929;
+  --dark-3: #727272;
+  --light1: #FFFDFD;
+  --light2: #FCFCFC;
+  --main-font: "Roboto", sans-serif;
+  --mono-font: "Roboto Mono", monospace;
+}
+
+.wall-of-fame-section {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.wall-of-fame-section .inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (min-width: 992px) {
+  .wall-of-fame-section .inner-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.wall-of-fame-section .postkort-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1rem 25vw;
+  grid-template-columns: 1fr 25vw;
+  gap: 1rem;
+  -ms-grid-rows: 1fr 1rem 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: auto;
+  height: auto;
+  aspect-ratio: 2.3/1;
+}
+.wall-of-fame-section .postkort-wrapper > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.wall-of-fame-section .postkort-wrapper > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.wall-of-fame-section .postkort-wrapper > *:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.wall-of-fame-section .postkort-wrapper > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+@media only screen and (min-width: 992px) {
+  .wall-of-fame-section .postkort-wrapper {
+    width: 50vw !important;
+    height: unset;
+    -ms-grid-columns: 1fr 2rem 15vw;
+    grid-template-columns: 1fr 15vw;
+    gap: 2rem;
+    -ms-grid-rows: 1fr 2rem 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .wall-of-fame-section .postkort-wrapper > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .wall-of-fame-section .postkort-wrapper > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .wall-of-fame-section .postkort-wrapper > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .wall-of-fame-section .postkort-wrapper > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .wall-of-fame-section .postkort-wrapper {
+    width: 53vw !important;
+    -ms-grid-rows: 40vh 40vh;
+    grid-template-rows: 40vh 40vh;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .wall-of-fame-section .postkort-wrapper {
+    width: 830px !important;
+    -ms-grid-rows: 40vh 40vh;
+    grid-template-rows: 40vh 40vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .wall-of-fame-section .postkort-wrapper {
+    -ms-grid-columns: 500px 245px;
+    grid-template-columns: 500px 245px;
+    width: 100%;
+    -ms-grid-rows: 350px 350px;
+    grid-template-rows: 350px 350px;
+  }
+  .wall-of-fame-section .postkort-wrapper > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .wall-of-fame-section .postkort-wrapper > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .wall-of-fame-section .postkort-wrapper > *:nth-child(3) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .wall-of-fame-section .postkort-wrapper > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+}
+.wall-of-fame-section .postkort-wrapper .postkort {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wall-of-fame-section .postkort-wrapper :nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  height: 100%;
+}
+.wall-of-fame-section .postkort-wrapper :nth-child(2) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+.wall-of-fame-section .postkort-wrapper :nth-child(3) {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+@media only screen and (min-width: 992px) {
+  .wall-of-fame-section .heading-container {
+    position: absolute;
+    right: 0;
+    z-index: 9;
+  }
+}
+.wall-of-fame-section .heading-container h2 {
+  font-size: clamp(4rem, 7vw, 6.75rem);
+  color: var(--red-1);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 992px) {
+  .wall-of-fame-section .heading-container h2 {
+    max-width: 450px;
+    text-align: right;
+    margin-bottom: 0;
+  }
+}
+.wall-of-fame-section .description-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: 2rem;
+}
+@media only screen and (min-width: 992px) {
+  .wall-of-fame-section .description-wrapper {
+    padding-top: 0;
+    padding-left: 2rem;
+  }
+}
+.wall-of-fame-section .description-wrapper a svg {
+  width: clamp(50px, 5vw, 100px);
+}
+.wall-of-fame-section .description-wrapper a svg path {
+  fill: var(--red-1);
+}
+/*# sourceMappingURL=wall-of-fame-section.css.map */

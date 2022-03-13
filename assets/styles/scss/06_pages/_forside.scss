@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the front page
+// -----------------------------------------------------------------------------
+
+@use '../01_abstracts/index' as *;
+
+.references-desktop {
+    display: none;
+    @include mq(lg) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.references-mobile {
+    display: flex;
+    justify-content: center;
+    @include mq(lg) {
+        display: none;
+    }
+}

@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains all site-wide SCSS variables.
+// -----------------------------------------------------------------------------
+
+// @use '../01_abstracts/mixins' as *;
+
+// Global site breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  qhd: 1920px,
+);
+
+:root {
+  // Red color
+  --red-1: #E5282B;
+
+  // Dark color
+  --dark-1: #242B31;
+  --dark-2: #292929;
+  --dark-3: #727272;
+
+  // Light color
+  --light1: #FFFDFD;
+  --light2: #FCFCFC;
+
+  --main-font: 'Roboto', sans-serif;
+  --mono-font: 'Roboto Mono', monospace;
+}

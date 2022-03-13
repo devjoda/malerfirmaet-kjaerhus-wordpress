@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to Custom Gutenberg Blocks.
+// -----------------------------------------------------------------------------
+
+@use '../01_abstracts/index' as *;
+
+.banner-container {
+  .view-icons {
+    &:hover {
+      text-decoration: none;
+      transition: none;
+    }
+  }
+}
+
+.circular-image-container {
+  display: flex;
+  justify-content: center;
+
+  & img {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 70vh;
+    max-width: 80vw;
+
+    @include mq(xl) {
+      width: 70vh;
+      height: 70vh;
+      max-width: 700px;
+      max-height: 700px;
+    }
+  }
+}

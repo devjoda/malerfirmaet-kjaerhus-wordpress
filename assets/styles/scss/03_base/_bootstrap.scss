@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains all modifications to the Bootstrap 5 Grid
+// -----------------------------------------------------------------------------
+
+@use "../01_abstracts/mixins" as *;
+
+// Add styling to Bootstrap Container
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    transition: var(--se--transition);
+    max-width: var(--se--content-width);
+}
+
+// Fullwidth container
+.container-fluid {
+    transition: var(--se--transition);
+}
+
+// Bootstrap Row
+.row {
+    --bs-gutter-x: 2rem;
+}

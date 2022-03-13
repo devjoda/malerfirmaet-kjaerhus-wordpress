@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to inner Gutenberg Blocks
+// -----------------------------------------------------------------------------
+
+@use "../01_abstracts/index" as *;
+
+body .gutenberg-content {
+    // Remove margin from first and last child inside block content
+    * {
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    // Space out headings
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 2rem;
+    }
+}

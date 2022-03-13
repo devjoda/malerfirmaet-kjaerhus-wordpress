@@ -1,0 +1,143 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the wall of fame page
+// -----------------------------------------------------------------------------
+
+@use "../01_abstracts/index" as *;
+
+#wall-of-fame {
+    padding: 0;
+    margin: 0 var(--se--section-padding) var(--se--section-padding);
+
+    .inner {
+        background-image: url("../../images/concrete-bg-pattern.png");
+        background-repeat: repeat;
+        background-size: 100%;
+        padding: var(--se--section-padding);
+
+        @include mq(sm) {
+            // padding: 0 var(--se--section-padding);
+        }
+    }
+
+    .swiper-wrapper {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .swiper-slider,
+    .wof-grid {
+        margin: 0;
+        // height: fit-content;
+        overflow: hidden;
+    }
+
+    .swiper-navigation-wrapper {
+        & svg {
+            width: 80px;
+            height: 80px;
+            margin-top: 2rem;
+
+            & path {
+                fill: white;
+            }
+        }
+    }
+
+    .swiper-slide {
+        text-align: center;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        font-size: 18px;
+        background: var(--light-1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .swiper-slide-inner {
+            position: relative;
+
+            & svg {
+                width: clamp(30px, 7vw, 40px);
+                height: clamp(30px, 7vw, 40px);
+            }
+        }
+    }
+
+    .swiper-slide .image-wrapper {
+        height: clamp(200px, 60vh, 700px);
+        width: 100%;
+        aspect-ratio: 0.68 / 1;
+        filter: drop-shadow(-30px 32px 34px rgba(0, 0, 0, 0.42));
+    }
+
+    .swiper-navigation-wrapper {
+        display: flex;
+        justify-content: center;
+        // padding: 0 var(--se--section-padding);
+    }
+
+    .swiper-navigation {
+        width: calc(clamp(200px, 60vh, 700px) - 160px);
+        display: flex;
+        justify-content: space-between;
+        // padding: 0 var(--se--section-padding);
+        // width: 100%;
+        // padding-right: var(--se--section-padding);
+        // padding-left: var(--se--section-padding);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .wof-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        padding: var(--se--section-padding) 0 0 0;
+
+        @include mq(md) {
+            gap: 1.5rem;
+        }
+
+        @include mq(lg) {
+            gap: 3rem;
+        }
+
+        @include mq(xxl) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6rem;
+        }
+
+        .wof-grid-item {
+            position: relative;
+            filter: drop-shadow(-30px 32px 34px rgba(0, 0, 0, 0.42));
+            padding: 0;
+        }
+    }
+
+    .social-wrapper {
+        position: absolute;
+        display: none;
+        gap: 1rem;
+        top: 16px;
+        right: 16px;
+
+        @include mq(md) {
+            display: flex;
+        }
+
+        svg {
+            margin: 0;
+            width: 32px;
+            height: 32px;
+
+            &:hover {
+                path {
+                    filter: invert(14%) sepia(79%) saturate(5963%) hue-rotate(352deg) brightness(102%) contrast(79%);
+                }
+            }
+        }
+    }
+}

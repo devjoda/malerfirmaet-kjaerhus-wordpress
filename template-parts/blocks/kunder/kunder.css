@@ -1,0 +1,33 @@
+:root {
+  --red-1: #E5282B;
+  --dark-1: #242B31;
+  --dark-2: #292929;
+  --dark-3: #727272;
+  --light1: #FFFDFD;
+  --light2: #FCFCFC;
+  --main-font: "Roboto", sans-serif;
+  --mono-font: "Roboto Mono", monospace;
+}
+
+.kunder-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 6rem;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+.kunder-wrapper .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 250px;
+}

@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// Standard CTA Section Block styling
+// -----------------------------------------------------------------------------
+
+@use "../../../assets/styles/scss/01_abstracts/mixins" as *;
+@use "../../../assets/styles/scss/03_base/typography" as *;
+
+section.cta-section-block {
+  @include mq(xl) {
+    .inner-container {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .text-container {
+    padding-top: var(--se--section-padding);
+    color: var(--red-1);
+
+    h3 {
+      font-family: var(--mono-font);
+      font-size: clamp(2.5rem, 2.5vw, 3.5rem);
+      color: var(--red-1);
+    }
+
+    .text-and-link-container {
+      svg {
+        width: clamp(50px, 6vw, 100px);
+
+        path {
+          fill: var(--red-1);
+        }
+      }
+
+      @include mq(xl) {
+        display: block;
+        p {
+          max-width: 450px;
+          padding-right: 2rem;
+        }
+      }
+      @include mq(xxl) {
+        display: flex;
+      }
+    }
+
+    @include mq(xl) {
+      padding-top: 0;
+    }
+  }
+
+  &.flip-horizontally {
+    @include mq(xl) {
+      .circular-image-container {
+        justify-content: flex-end;
+        order: 1;
+      }
+    }
+  }
+}

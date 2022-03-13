@@ -1,0 +1,73 @@
+// -------------------------------------------------------------------------------
+// This file contains styles that are specific to the frontpage hero template part
+// -------------------------------------------------------------------------------
+
+@use "../01_abstracts/index" as *;
+
+#frontpage-banner {
+    h1#site-title {
+        display: none;
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+
+        img {
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            width: 90vw;
+            max-width: 25rem;
+
+            @include mq(xl) {
+                width: 40vw;
+                height: 40vw;
+                max-width: 50rem;
+                max-height: 50rem;
+            }
+        }
+    }
+
+    .hero-details {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .site-title-svg-container {
+            padding: 3rem 0 2rem;
+        }
+        .site-title-svg-container {
+            display: block;
+        }
+
+        .site-title-svg-container :nth-child(2) {
+            display: block;
+            width: clamp(300px, 90vw, 550px);
+            height: 100%;
+        }
+
+        .description {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 28px;
+            max-width: 40rem;
+            color: var(--red-1);
+        }
+
+        .anchor-links {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            a {
+                text-transform: uppercase;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 58px;
+                display: flex;
+                align-items: center;
+                column-gap: 1rem;
+            }
+        }
+    }
+}

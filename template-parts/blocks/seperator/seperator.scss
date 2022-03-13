@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// Standard Seperator Block styling
+// -----------------------------------------------------------------------------
+
+@use "../../../assets/styles/scss/01_abstracts/mixins" as *;
+
+.block-seperator {
+  margin: var(--se--section-padding) 0;
+
+  :after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: var(--red-1);
+  }
+}

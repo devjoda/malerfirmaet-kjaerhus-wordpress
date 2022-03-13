@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// Standard Section Block styling
+// -----------------------------------------------------------------------------
+
+@use "../../../assets/styles/scss/01_abstracts/mixins" as *;
+
+.kunder-wrapper {
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6rem;
+    filter: grayscale(1);
+
+    & .logo {
+        display: flex;
+        align-items: center;
+        max-width: 250px;
+    }
+}

@@ -1,0 +1,81 @@
+:root {
+  --red-1: #E5282B;
+  --dark-1: #242B31;
+  --dark-2: #292929;
+  --dark-3: #727272;
+  --light1: #FFFDFD;
+  --light2: #FCFCFC;
+  --main-font: "Roboto", sans-serif;
+  --mono-font: "Roboto Mono", monospace;
+}
+
+/*
+Theme Name: Superego
+Theme URI: https://superego.nu/
+Description: Dette tema er special udviklet af Superego.
+Author: Superego
+Author URI: https://superego.nu/
+Version: 1.0
+License: GNU General Public License & MIT
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Superego, SCSS, Responsive, AOS, Swiper, FancyBox, Lottie, Parallax
+*/
+:root {
+  --se--success-b: #00ba88;
+  --se--success-l: #4ddeb7;
+  --se--success-d: #00966d;
+  --se--warning-b: #f4b740;
+  --se--warning-l: #ffd789;
+  --se--warning-d: #c39233;
+  --se--error-b: #ed5252;
+  --se--error-l: #ef8d8d;
+  --se--error-d: #c73131;
+  --se--heading-font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --se--body-font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --se--button-font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --se--content-width: 100%;
+  --se--full-width: 1600px;
+  --se--header-height: 80px;
+  --se--section-padding: 3rem;
+  --se--transition: 300ms ease-out;
+  --se--transition-color: color 1s ease-out;
+  --se--transition-slow: 550ms ease-out;
+  --se--border-radius: 0;
+  --se--box-shadow: rgb(0 0 0 / 8%) 0 4px 40px 0px;
+  --bs-gutter-x: 4rem;
+}
+@media only screen and (min-width: 576px) {
+  :root {
+    --se--content-width: 540px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  :root {
+    --se--section-padding: 4rem;
+    --se--content-width: 720px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  :root {
+    --se--content-width: 960px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  :root {
+    --se--section-padding: 5rem;
+    --se--content-width: 1140px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  :root {
+    --se--section-padding: 6rem;
+    --se--content-width: 1320px;
+    --se--header-height: 130px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  :root {
+    --se--section-padding: 9rem;
+    --se--content-width: 1400px;
+  }
+}

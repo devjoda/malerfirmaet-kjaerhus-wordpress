@@ -1,0 +1,78 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the privat page
+// -----------------------------------------------------------------------------
+
+@use "../01_abstracts/index" as *;
+
+.relaterede-projekter {
+  .fancybox-image-container {
+    display: none;
+  }
+
+  h3 {
+    font-family: var(--mono-font);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: right;
+    color: var(--red-1);
+    text-transform: uppercase;
+    margin-top: 40px;
+  }
+
+  .seperator {
+    margin-bottom: 0;
+  }
+
+  .projekt-wrapper.row {
+    --bs-gutter-x: 3.5rem;
+    --bs-gutter-y: 3.5rem;
+    padding: 0 0 var(--se--section-padding);
+
+    & :nth-child(even) a {
+      @include mq(lg) {
+        margin-right: 2rem;
+      }
+    }
+
+    h2 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.5rem;
+      line-height: 2.4rem;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-weight: normal;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      color: var(--dark-2);
+    }
+
+    svg {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+
+      path {
+        fill: var(--red-1);
+      }
+    }
+
+    .case {
+      img {
+        width: 100%;
+      }
+
+      .bottom-container {
+        gap: 1rem;
+        padding-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}

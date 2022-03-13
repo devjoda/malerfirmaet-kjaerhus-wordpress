@@ -1,0 +1,88 @@
+@use 'assets/styles/scss/01_abstracts/mixins' as *;
+/*
+Theme Name: Superego
+Theme URI: https://superego.nu/
+Description: Dette tema er special udviklet af Superego.
+Author: Superego
+Author URI: https://superego.nu/
+Version: 1.0
+License: GNU General Public License & MIT
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Superego, SCSS, Responsive, AOS, Swiper, FancyBox, Lottie, Parallax
+*/
+
+// Superego Global Custom Variables
+:root {
+  // Success colors
+  --se--success-b: #00ba88;
+  --se--success-l: #4ddeb7;
+  --se--success-d: #00966d;
+
+  // Warning colors
+  --se--warning-b: #f4b740;
+  --se--warning-l: #ffd789;
+  --se--warning-d: #c39233;
+
+  // Error colors
+  --se--error-b: #ed5252;
+  --se--error-l: #ef8d8d;
+  --se--error-d: #c73131;
+
+  // Typography
+  --se--heading-font: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --se--body-font: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --se--button-font: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+  // Layout
+  --se--content-width: 100%;
+  --se--full-width: 1600px;
+  --se--header-height: 80px;
+  --se--section-padding: 3rem;
+
+  // Transitions
+  --se--transition: 300ms ease-out;
+  --se--transition-slow: 550ms ease-out;
+  --se--transition-color: color 300ms ease-out;
+
+  // Utilities
+  --se--border-radius: 0;
+  --se--box-shadow: rgb(0 0 0 / 8%) 0 4px 40px 0px;
+
+  // Bootstrap
+  --bs-gutter-x: 4rem;
+
+  // Small Breakpoint
+  @include mq(sm) {
+    --se--content-width: 540px;
+  }
+
+  // Medium Breakpoint
+  @include mq(md) {
+    --se--section-padding: 4rem;
+    --se--content-width: 720px;
+  }
+
+  // Large Breakpoint
+  @include mq(lg) {
+    --se--content-width: 960px;
+  }
+
+  // XL Breakpoint
+  @include mq(xl) {
+    --se--section-padding: 5rem;
+    --se--content-width: 1140px;
+  }
+
+  // XXL Breakpoint
+  @include mq(xxl) {
+    --se--section-padding: 6rem;
+    --se--content-width: 1320px;
+    --se--header-height: 130px;
+  }
+
+  // QuadHD + 4K Breakpoint
+  @include mq(qhd) {
+    --se--section-padding: 9rem;
+    --se--content-width: 1400px;
+  }
+}

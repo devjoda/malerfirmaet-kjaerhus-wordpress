@@ -1,0 +1,111 @@
+:root {
+  --red-1: #E5282B;
+  --dark-1: #242B31;
+  --dark-2: #292929;
+  --dark-3: #727272;
+  --light1: #FFFDFD;
+  --light2: #FCFCFC;
+  --main-font: "Roboto", sans-serif;
+  --mono-font: "Roboto Mono", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--main-font);
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  max-width: 88ch;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+}
+p:empty {
+  display: none;
+}
+
+strong,
+body .strong {
+  font-weight: bolder;
+  line-height: 28px;
+}
+
+.caption {
+  font-size: 12px;
+  font-family: var(--se--heading-font);
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--wp--preset--color--dark-1);
+}
+.caption.overline {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 1200px) {
+  section.cta-section-block .inner-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+section.cta-section-block .text-container {
+  padding-top: var(--se--section-padding);
+  color: var(--red-1);
+}
+section.cta-section-block .text-container h3 {
+  font-family: var(--mono-font);
+  font-size: clamp(2.5rem, 2.5vw, 3.5rem);
+  color: var(--red-1);
+}
+section.cta-section-block .text-container .text-and-link-container svg {
+  width: clamp(50px, 6vw, 100px);
+}
+section.cta-section-block .text-container .text-and-link-container svg path {
+  fill: var(--red-1);
+}
+@media only screen and (min-width: 1200px) {
+  section.cta-section-block .text-container .text-and-link-container {
+    display: block;
+  }
+  section.cta-section-block .text-container .text-and-link-container p {
+    max-width: 450px;
+    padding-right: 2rem;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  section.cta-section-block .text-container .text-and-link-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section.cta-section-block .text-container {
+    padding-top: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section.cta-section-block.flip-horizontally .circular-image-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}

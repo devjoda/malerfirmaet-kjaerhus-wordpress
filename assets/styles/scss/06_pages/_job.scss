@@ -1,0 +1,168 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the job page.
+// -----------------------------------------------------------------------------
+
+@use '../01_abstracts/index' as *;
+
+#page-504 {
+  margin-bottom: var(--se--section-padding);
+
+  .stillingsopslag-wrapper {
+    div.image.row {
+      overflow: hidden;
+    }
+
+    &:nth-child(odd) {
+      .image.row {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .seperator {
+    margin: 56px 0;
+  }
+
+  .header {
+    .text {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include mq(xl) {
+        order: unset;
+      }
+
+      h1 {
+        font-family: var(--main-font);
+        font-weight: 600;
+        font-size: clamp(50px, 5vw, 110px);
+        line-height: 1.5em;
+        text-transform: uppercase;
+        color: var(--red-1);
+        margin-bottom: 0.5em;
+        max-width: 10em;
+        @include mq(qhd) {
+          max-width: 70vw;
+        }
+      }
+
+      .body {
+        margin-bottom: 0.75em;
+      }
+
+      .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include mq(xxl) {
+          flex-direction: row;
+        }
+
+        & .email,
+        & .phone {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+          text-transform: uppercase;
+        }
+
+        & .svg-container {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    .image {
+      .circular-image-container {
+        display: flex;
+        justify-content: flex-start;
+
+        @include mq(xl) {
+          justify-content: flex-end;
+        }
+      }
+
+      & img {
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        width: 40vh;
+        max-width: 80vw;
+        margin-bottom: 4rem;
+
+        @include mq(xl) {
+          width: 50vh;
+          height: 50vh;
+          max-width: 700px;
+          max-height: 700px;
+        }
+      }
+    }
+  }
+
+  .stillingsopslag {
+    .row {
+      // @include mq(lg) {
+      //   height: 50vh;
+      // }
+    }
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    .text {
+      @include mq(lg) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      h2 {
+        font-family: var(--mono-font);
+        font-style: normal;
+        font-weight: 300;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        color: var(--red-1);
+        margin: 4rem 0 1rem;
+        @include mq(lg) {
+          margin-top: 0;
+        }
+      }
+
+      p {
+        font-family: var(--main-font);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        color: var(--red-1);
+        margin-bottom: 4rem;
+      }
+
+      .svg-container {
+        width: clamp(50px, 3vw, 80px);
+        height: clamp(50px, 3vw, 80px);
+
+        svg {
+          width: 100%;
+          height: 100%;
+
+          path {
+            fill: var(--red-1);
+          }
+        }
+      }
+    }
+  }
+}

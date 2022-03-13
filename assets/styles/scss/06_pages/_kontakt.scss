@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the contact page.
+// -----------------------------------------------------------------------------
+
+@use '../01_abstracts/index' as *;
+
+#post-505 {
+  margin-bottom: 0;
+}
+
+section.kontakt-formular {
+  margin-bottom: var(--se--section-padding);
+
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  h3 {
+    padding-top: 3rem;
+    // font-family: var(--mono-font);
+    // font-style: normal;
+    // font-weight: 300;
+    // font-size: 40px;
+    // line-height: 58px;
+    // text-transform: uppercase;
+    // color: var(--red-1);
+  }
+}

@@ -1,0 +1,77 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the standard page template
+// -----------------------------------------------------------------------------
+
+@use "../01_abstracts/index" as *;
+
+.page {
+
+    margin-bottom: var(--se--section-padding);
+    
+    &.type-page {
+        h1 {
+            font-family: var(--main-font);
+            font-weight: 600;
+            font-size: clamp(2rem, 7vw, 90px);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            color: var(--red-1);
+            margin-bottom: 0;
+            max-width: 10em;
+            color: var(--red-1);
+            overflow-wrap: normal;
+
+            @include mq(qhd) {
+                max-width: 60vw;
+            }
+
+        }
+        
+        .subheading {
+            h2 {
+                font-family: var(--mono-font);
+                font-style: normal;
+                font-weight: 300;
+                font-size: clamp(1.5rem, 3vw, 2rem);
+                line-height: 170%;
+                text-transform: uppercase;
+                max-width: 15em;
+                color: var(--red-1);
+                overflow-wrap: normal;
+                
+                @include mq(qhd) {
+                    font-size: clamp(1.5rem, 3vw, 2.5rem);
+                }
+            }
+        }
+        
+        .featured-image {
+            height: 40vh;
+            
+            @include mq(lg) {
+                height: 50vh;
+            }
+
+            img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                padding: 3rem 0 1rem;
+
+                @include mq(lg) {
+                    padding: 0;
+                }
+            }
+        }
+
+        .article-body {
+            @include mq(lg) {
+                padding-top: 5rem;
+            }
+
+            .content {
+                padding-top: 1rem;
+            }
+        }
+    }
+}

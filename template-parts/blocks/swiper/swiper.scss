@@ -1,0 +1,110 @@
+// -----------------------------------------------------------------------------
+// Standard Swiper.js Slider Block styling
+// -----------------------------------------------------------------------------
+
+@use "../../../assets/styles/scss/01_abstracts/mixins" as *;
+
+body section.swiper.section {
+  padding: 0;
+}
+
+.swiper {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  &:hover {
+    cursor: grab;
+  }
+
+  .swiper-slider {
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  svg {
+    width: clamp(50px, 6vw, 80px);
+    height: clamp(50px, 6vw, 80px);
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    // flex-wrap: nowrap;
+    // text-align: center;
+    font-size: 18px;
+    background: var(--light-1);
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
+    .text {
+      // display: none;
+      user-select: none;
+      order: 0;
+      padding: 2rem 0;
+
+      p {
+        width: 42rem;
+        font-size: 18px;
+        line-height: 28px;
+        color: var(--dark-1);
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: clamp(400px, 60vh, 1080px);
+      object-fit: cover;
+      object-position: bottom center;
+    }
+  }
+
+  .swiper-details {
+    @include mq(lg) {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    &:hover {
+      cursor: auto;
+    }
+  }
+
+  .fancybox-image-container {
+    display: none;
+  }
+
+  .swiper-navigation {
+    background: var(--light1);
+    gap: 2rem;
+    display: flex;
+    align-items: flex-start;
+
+    @include mq(lg) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 2rem 0 5rem;
+    }
+
+    &:hover {
+      cursor: pointer !important;
+    }
+
+    @include mq(lg) {
+      justify-content: flex-end;
+      gap: 3rem;
+    }
+    @include mq(xl) {
+      gap: 4rem;
+    }
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    content: "" !important;
+  }
+}

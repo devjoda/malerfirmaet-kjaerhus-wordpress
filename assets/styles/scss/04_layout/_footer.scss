@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site
+// -----------------------------------------------------------------------------
+
+@use '../01_abstracts/index' as *;
+
+body footer#footer {
+  padding: var(--se--section-padding) 0;
+  background: var(--wp--preset--color--dark-2);
+  position: relative;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--se--section-padding);
+
+    .social {
+      padding-top: 0.5rem;
+    }
+
+    @include mq(md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      > * {
+        flex-basis: 40%;
+        height: 220px;
+      }
+
+      .social {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .company-info {
+        text-align: right;
+        order: 4;
+
+        & p {
+          max-width: none;
+        }
+      }
+
+      .logo {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      #footer-logo {
+        padding-bottom: 1.5rem;
+      }
+    }
+
+    ul {
+      margin: 0;
+    }
+  }
+
+  #footer-links.menu,
+  #referencer,
+  .links-container {
+    font-style: normal;
+    font-weight: 84;
+    font-size: 18px;
+    line-height: 48px;
+    color: var(--red-1);
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .company-info {
+    p {
+      font-family: var(--main-font);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      color: var(--dark-3);
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+  }
+}
